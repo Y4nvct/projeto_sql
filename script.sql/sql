@@ -1,0 +1,43 @@
+-- -----------------------------------------------------
+-- Povoamento de Dados - Sistema Aprenda Mais
+-- -----------------------------------------------------
+
+-- 1. Inserindo Instrutores
+INSERT INTO Instrutor (Nome, Email, Especialidade) VALUES 
+('Carlos Silva', 'carlos.silva@email.com', 'Ciência de Dados'),
+('Ana Souza', 'ana.souza@email.com', 'Design e UX'),
+('Roberto Lima', 'roberto.lima@email.com', 'Desenvolvimento Web');
+
+-- 2. Inserindo Cursos
+-- Note que referenciamos os IDs dos instrutores criados acima
+INSERT INTO Curso (Titulo, Descricao, Preco, ID_Instrutor) VALUES 
+('Python para Iniciantes', 'Curso completo de Python do zero ao avançado.', 29.90, 1),
+('UX Design Essencial', 'Aprenda a criar interfaces focadas no usuário.', 49.90, 2),
+('SQL para Análise de Dados', 'Domine bancos de dados relacionais.', 39.90, 1),
+('HTML e CSS Moderno', 'Crie sites responsivos e bonitos.', 25.00, 3);
+
+-- 3. Inserindo Alunos
+INSERT INTO Aluno (Nome, Email, CPF, Data_Cadastro) VALUES 
+('Lucas Pereira', 'lucas.p@email.com', '123.456.789-00', '2023-01-15'),
+('Fernanda Costa', 'fernanda.c@email.com', '234.567.890-11', '2023-02-20'),
+('João Miguel', 'joao.m@email.com', '345.678.901-22', '2023-03-10');
+
+-- 4. Inserindo Matrículas
+-- Alunos se matriculando em cursos
+INSERT INTO Matricula (ID_Aluno, ID_Curso, Data_Matricula, Status) VALUES 
+(1, 1, '2023-01-16', 'Ativa'), -- Lucas no Python
+(1, 3, '2023-02-01', 'Concluida'), -- Lucas no SQL
+(2, 2, '2023-02-21', 'Ativa'), -- Fernanda no UX
+(3, 4, '2023-03-11', 'Cancelada'); -- João no HTML
+
+-- 5. Inserindo Módulos (Apenas para o curso de Python - ID 1)
+INSERT INTO Modulo (Titulo, Ordem, ID_Curso) VALUES 
+('Introdução e Instalação', 1, 1),
+('Estruturas de Controle', 2, 1),
+('Funções e Módulos', 3, 1);
+
+-- 6. Inserindo Aulas (Para o Módulo 1 do curso de Python)
+INSERT INTO Aula (Titulo, Link_Video, Duracao_Minutos, ID_Modulo) VALUES 
+('Instalando o Python no Windows', 'http://video1.com', 15, 1),
+('Variaveis e Tipos de Dados', 'http://video2.com', 20, 1),
+('Configurando o VS Code', 'http://video3.com', 10, 1);

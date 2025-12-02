@@ -1,0 +1,25 @@
+# Sistema
+Thumbs.db
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# SQL backups/temp
+*.sql~
+
+# Environment
+.env
+
+# Windows
+desktop.ini
+
+# Node
+node_modules/
+
+# Logs
+*.log
