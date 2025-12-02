@@ -25,4 +25,4 @@ O "Aprenda Mais" é uma plataforma que conecta instrutores e alunos. O sistema g
 5. Utilize o arquivo `4_updates_deletes.sql` para testar modificações no banco.
 
 ## 📋 Autor
-[Seu Nome Aqui]
+[Yan Victor Gomes Silva]
